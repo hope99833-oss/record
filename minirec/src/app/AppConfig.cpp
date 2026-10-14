@@ -145,6 +145,12 @@ AppConfig AppConfig::load(const std::string &path)
 		cfg.outputHeight = 1080;
 	if (cfg.countdownSeconds < 0 || cfg.countdownSeconds > 10)
 		cfg.countdownSeconds = 3;
+	if (cfg.cameraWidth < 64 || cfg.cameraWidth > 1280)
+		cfg.cameraWidth = 320;
+	if (cfg.mouseFxRadius < 1 || cfg.mouseFxRadius > 512)
+		cfg.mouseFxRadius = 48;
+	if (cfg.mouseFxDurationMs < 100 || cfg.mouseFxDurationMs > 5000)
+		cfg.mouseFxDurationMs = 700;
 
 	logInfo("已加载配置：%s", path.c_str());
 	return cfg;
