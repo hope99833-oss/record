@@ -189,7 +189,7 @@ void AppConfig::save(const std::string &path) const
 	obs_data_set_bool(data, "mouseFxEnabled", mouseFxEnabled);
 	obs_data_set_int(data, "mouseFxRadius", mouseFxRadius);
 	obs_data_set_int(data, "mouseFxDurationMs", mouseFxDurationMs);
-	obs_data_set_int(data, "mouseFxColor", static_cast<int>(mouseFxColor));
+	obs_data_set_int(data, "mouseFxColor", static_cast<long long>(mouseFxColor));
 
 	obs_data_set_string(data, "outputDir", outputDir.c_str());
 	obs_data_set_bool(data, "autoRemuxMp4", autoRemuxMp4);

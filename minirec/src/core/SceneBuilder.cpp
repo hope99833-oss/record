@@ -322,7 +322,7 @@ void SceneBuilder::createMouseFx(const AppConfig &config)
 	obs_data_t *settings = obs_data_create();
 	obs_data_set_int(settings, "radius", config.mouseFxRadius);
 	obs_data_set_int(settings, "duration_ms", config.mouseFxDurationMs);
-	obs_data_set_int(settings, "color", static_cast<int>(config.mouseFxColor));
+	obs_data_set_int(settings, "color", static_cast<long long>(config.mouseFxColor));
 	obs_data_set_int(settings, "width", canvasWidth > 0 ? canvasWidth : 1920);
 	obs_data_set_int(settings, "height", canvasHeight > 0 ? canvasHeight : 1080);
 	obs_data_set_int(settings, "capture_x", m_target.screenRect.x);
