@@ -1,0 +1,36 @@
+# ============================================================
+# OBS 构建工作区
+# obs/ 存放第三方 OBS Studio 源码、预编译依赖(.deps) 以及
+# build-obs / build-minirec / prefix 等编译产物（合计约 2.6 GB）。
+# 全部通过 minirec/tools/fetch-sources.ps1 重新下载，不纳入版本库。
+# ============================================================
+/obs/
+
+# Claude Code 本地状态
+.claude/
+
+# 操作系统生成文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# 通用编译产物（兜底）
+*.exe
+*.pdb
+*.obj
+*.o
+*.lib
+*.dll
+*.so
+*.a
+*.dylib
+*.ilk
+*.exp
+*.idb
+*.ipdb

@@ -1,0 +1,53 @@
+# ============================================================
+# MiniRec 忽略规则（CMake + MSVC + Qt）
+# 项目采用 out-of-tree 构建，产物默认落在 obs/build-minirec，
+# 此文件用于兜底，并保证单独使用本项目时也能保持干净。
+# ============================================================
+
+# CMake 生成文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+CMakeLists.txt.user
+build/
+cmake-build-*/
+out/
+dist/
+
+# Visual Studio 生成文件
+.vs/
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.vc.db
+*.dir/
+x64/
+x86/
+[Dd]ebug/
+[Rr]elease/
+
+# 编译产物
+*.obj
+*.pdb
+*.lib
+*.dll
+*.exe
+*.ilk
+*.exp
+*.idb
+*.ipdb
+*.aps
+*.ncb
+*.suo
+
+# Qt AUTOMOC / AUTORCC / AUTOUIC 生成文件
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*_autogen/
+
+# 打包输出
+packaging/*.zip
